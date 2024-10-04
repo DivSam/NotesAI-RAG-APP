@@ -29,5 +29,9 @@ def chunk_data(documents: list[Document]) -> list[list[Document]]:
     return text_splitter.split_documents(documents)
 
 
+def add_documents_to_chroma(chunks: list[list[Document]]):
+    pass
+
+
 if __name__ == '__main__':
     main()
