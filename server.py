@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from fastapi import FastAPI
-from query_database import query_vector_database
+from query_database import query_vector_database, query_model
 
 
 class Query(BaseModel):
@@ -13,5 +13,6 @@ app = FastAPI()
 
 @app.post("/query/")
 async def query(query: Query):
-    results = query_vector_database(query.q)
-    return {"user": query.user, "results": results}
+    context = query_vector_database(query.q)
+    response = query_model(context)
+    return {"user": query.user, "response": response}
