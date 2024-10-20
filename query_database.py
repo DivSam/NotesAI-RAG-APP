@@ -14,7 +14,7 @@ Answer the question based on the above context: {question}
 """
 
 GENERATE_QUESTION_PROMPT = """
-Based on the following context and your knowledge, generate 3 multiple choice questions and answers with 4 choices each and the correct answer always being the first choice.
+Based on the following context and your knowledge, generate 15 multiple choice questions and answers with 4 choices each and the correct answer always being the first choice.
 ----------------------
 {context}
 """
