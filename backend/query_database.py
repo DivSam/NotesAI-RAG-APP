@@ -14,7 +14,15 @@ Answer the question based on the above context: {question}
 """
 
 GENERATE_QUESTION_PROMPT = """
-Based on the following context and your knowledge, generate 15 multiple choice questions and answers with 4 choices each and the correct answer always being the first choice.
+Based on the following context and your knowledge, generate 5 multiple choice questions and answers with 4 choices each and the correct answer always being the first choice.
+Return the questions and answers in the following yaml format:
+    
+- question 1: "What is the capital of France?"
+    choices:
+    - A) Paris
+    - B) London
+    - C) Berlin
+    - D) Madrid
 ----------------------
 {context}
 """
